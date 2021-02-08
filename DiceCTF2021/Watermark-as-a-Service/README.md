@@ -2,7 +2,7 @@
 
 ## Challenge Description
 
-![Description](./img/description.png)
+<img src="./img/description.png" alt="Description" style="zoom:50%;" />
 
 [app.js](./challenge/app.js)
 
@@ -21,7 +21,7 @@ Using [dotless-decimal IP](https://en.wikipedia.org/wiki/IPv4#Address_representa
 
 Visiting  [http://metadata.google.internal/computeMetadata/v1/instance/](http://metadata.google.internal/computeMetadata/v1/instance/):
 
-![v1api](./img/v1api.png)
+<img src="./img/v1api.png" alt="v1api" style="zoom: 33%;" />
 
 ### Google Cloud API Leakage
 
@@ -29,11 +29,11 @@ Now that's some progress! But according to the docs we would need a `Metadata-Fl
 
 1. http://metadata.google.internal/computeMetadata/v1beta1/instance/?recursive=true
 
-![instance](./img/instance-recursive.png)
+<img src="./img/instance-recursive.png" alt="instance" style="zoom: 33%;" />
 
 2. http://metadata.google.internal/computeMetadata/v1beta1/instance/service-accounts/default/token?alt=json
 
-![](./img/token.png)
+<img src="./img/token.png" style="zoom:33%;" />
 
 Summary:
 
@@ -53,7 +53,7 @@ $ docker pull gcr.io/dicegang-waas/waas
 
 And by running the image we got the flag!
 
-![](./img/flag.png)
+<img src="./img/flag.png" style="zoom: 50%;" />
 
 flag: `dice{the_cloud_is_just_someone_elses_computer}`
 
