@@ -17,7 +17,7 @@ The service running on [waas.dicec.tf](https://waas.dicec.tf) is a simple websit
 
 ### SSRF
 
-Using [dotless-decimal IP](https://en.wikipedia.org/wiki/IPv4#Address_representations) (For example, `http://192.0.2.235`  can be written as `http://3221226219`. A very rare format!) and [xip.io](http://xip.io) did not work because of the regex check and URL parser used in the source code. At last I managed to bypass the checking with [bit.ly](https://bit.ly), a URL shortening service. Basically, [bit.ly](https://bit.ly) returns a `HTTP 302 Found` and a Location Header, asking the client to go to the new location. With this trick, I was able to visit the metadata server.
+Using [dotless-decimal IP](https://en.wikipedia.org/wiki/IPv4#Address_representations) (For example, `http://192.0.2.235`  can be written as `http://3221226219`. A very rare format!) and [xip.io](http://xip.io) did not work because of the regex check and URL parser used in the source code. At last I managed to bypass the checking with [bit.ly](https://bit.ly), a URL shortening service. Basically, [bit.ly](https://bit.ly) returns a `HTTP 302 Found` and a `Location` Header, asking the client to go to the new location. With this trick, I was able to visit the metadata server.
 
 Visiting  [http://metadata.google.internal/computeMetadata/v1/instance/](http://metadata.google.internal/computeMetadata/v1/instance/):
 
